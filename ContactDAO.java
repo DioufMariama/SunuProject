@@ -18,6 +18,8 @@ import domain.metier.Contact;
 import domain.metier.ContactGroup;
 import domain.metier.PhoneNumber;
 
+// I have commited DIOUM2TOUBA
+
 public class ContactDAO extends HibernateDaoSupport implements IContactDAO{
 	
 	public ContactDAO(){}
