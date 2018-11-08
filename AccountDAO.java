@@ -96,7 +96,7 @@ public class AccountDAO extends HibernateDaoSupport implements IAccountDAO {
 		Account acc = (Account) session.createCriteria(Account.class)
 				.add(Restrictions.eq("login", login) ).uniqueResult();
 		tx.commit();
-		System.out.println("findAccountIdByLogin réussi");
+		System.err("findAccountIdByLogin réussi");
 		return acc==null ? GestionContactUtils.BAD_ID : acc.getId();
 	}
 }
