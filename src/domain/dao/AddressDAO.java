@@ -3,13 +3,13 @@ package domain.dao;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
-
+//ce ci est un commentaire
 import domain.dao.interfaces.IAddressDAO;
 import domain.metier.Address;
 
 public class AddressDAO extends HibernateDaoSupport implements IAddressDAO{
 
-	public AddressDAO(){
+	public AddressDAO(){//ce ci est un commentaire 
 
 	}
 
