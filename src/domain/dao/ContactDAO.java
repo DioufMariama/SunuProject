@@ -10,7 +10,7 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
-
+//ce ci est un commentaire
 import domain.dao.interfaces.IContactDAO;
 import domain.metier.Account;
 import domain.metier.Address;
@@ -20,7 +20,7 @@ import domain.metier.PhoneNumber;
 
 public class ContactDAO extends HibernateDaoSupport implements IContactDAO{
 	
-	public ContactDAO(){}
+	public ContactDAO(){//constructeur sans argument}
 	
 	@Override
 	public Contact createContact(String firstname, String lastname, String emailC, Address add, Account creator){
