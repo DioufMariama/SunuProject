@@ -25,7 +25,7 @@ public class AccountDAO extends HibernateDaoSupport implements IAccountDAO {
 		if(!tx.isActive()) tx = session.beginTransaction();
 		session.save(acc);
 		tx.commit();
-		System.out.println("createAccount réussi");
+		System.err("createAccount réussi");
 		return acc;
 		
 	}
@@ -46,7 +46,7 @@ public class AccountDAO extends HibernateDaoSupport implements IAccountDAO {
 		if(!tx.isActive()) tx = session.beginTransaction();
 		session.delete(acc);
 		tx.commit();
-		System.out.println("deleteAccount réussi");
+		System.err("deleteAccount réussi");
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class AccountDAO extends HibernateDaoSupport implements IAccountDAO {
 		Account acc = (Account) session.load(Account.class, id);
 		acc.setPwd(pwd);
 		tx.commit();
-		System.out.println("updateAccount réussi");
+		System.err("updateAccount réussi");
 	}
 
 	@Override
@@ -68,7 +68,7 @@ public class AccountDAO extends HibernateDaoSupport implements IAccountDAO {
 		Account acc = (Account) session.createCriteria(Account.class)
 				.add(Restrictions.eq("login", login) ).uniqueResult();
 		tx.commit();
-		System.out.println("containsLogin réussi");
+		System.err("containsLogin réussi");
 		return acc!=null;
 	}
 
