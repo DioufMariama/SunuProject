@@ -8,6 +8,8 @@ import domain.dao.interfaces.IPhoneNumberDAO;
 import domain.metier.Contact;
 import domain.metier.PhoneNumber;
 
+// My phone number is 77 279 62 45 Senegal
+
 public class PhoneNumberDAO extends HibernateDaoSupport implements IPhoneNumberDAO {
 
 	public PhoneNumberDAO(){ }
